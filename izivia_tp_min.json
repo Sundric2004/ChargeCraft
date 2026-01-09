@@ -1,0 +1,122 @@
+[
+  {
+    "id_station_itinerance": "FRIZI_1001",
+    "nom_operateur": "IZIVIA",
+    "nom_station": "IZIVIA Station 1",
+    "adresse_station": "71 Rue de l'Énergie",
+    "code_insee_commune": "42098",
+    "puissance_nominale": 22,
+    "nbre_pdc": 3,
+    "condition_acces": "ACCES_PAYANT",
+    "latitude": 47.458211,
+    "longitude": -5.124839
+  },
+  {
+    "id_station_itinerance": "FRIZI_1002",
+    "nom_operateur": "IZIVIA",
+    "nom_station": "IZIVIA Station 2",
+    "adresse_station": "140 Rue de l'Énergie",
+    "code_insee_commune": "21395",
+    "puissance_nominale": 150,
+    "nbre_pdc": 5,
+    "condition_acces": "ACCES_LIBRE",
+    "latitude": 42.035201,
+    "longitude": 5.610016
+  },
+  {
+    "id_station_itinerance": "FRIZI_1003",
+    "nom_operateur": "IZIVIA",
+    "nom_station": "IZIVIA Station 3",
+    "adresse_station": "130 Rue de l'Énergie",
+    "code_insee_commune": "88907",
+    "puissance_nominale": 22,
+    "nbre_pdc": 6,
+    "condition_acces": "ACCES_LIBRE",
+    "latitude": 41.300952,
+    "longitude": -2.22043
+  },
+  {
+    "id_station_itinerance": "FRIZI_1004",
+    "nom_operateur": "IZIVIA",
+    "nom_station": "IZIVIA Station 4",
+    "adresse_station": "108 Rue de l'Énergie",
+    "code_insee_commune": "38893",
+    "puissance_nominale": 50,
+    "nbre_pdc": 6,
+    "condition_acces": "ACCES_RESERVE",
+    "latitude": 48.231798,
+    "longitude": 5.019875
+  },
+  {
+    "id_station_itinerance": "FRIZI_1005",
+    "nom_operateur": "IZIVIA",
+    "nom_station": "IZIVIA Station 5",
+    "adresse_station": "41 Rue de l'Énergie",
+    "code_insee_commune": "65392",
+    "puissance_nominale": 50,
+    "nbre_pdc": 4,
+    "condition_acces": "ACCES_LIBRE",
+    "latitude": 49.175248,
+    "longitude": -5.402519
+  },
+  {
+    "id_station_itinerance": "FRIZI_1006",
+    "nom_operateur": "IZIVIA",
+    "nom_station": "IZIVIA Station 6",
+    "adresse_station": "27 Rue de l'Énergie",
+    "code_insee_commune": "22156",
+    "puissance_nominale": 50,
+    "nbre_pdc": 2,
+    "condition_acces": "ACCES_RESERVE",
+    "latitude": 43.174669,
+    "longitude": 5.952412
+  },
+  {
+    "id_station_itinerance": "FRIZI_1007",
+    "nom_operateur": "IZIVIA",
+    "nom_station": "IZIVIA Station 7",
+    "adresse_station": "12 Rue de l'Énergie",
+    "code_insee_commune": "70217",
+    "puissance_nominale": 150,
+    "nbre_pdc": 2,
+    "condition_acces": "ACCES_RESERVE",
+    "latitude": 49.559693,
+    "longitude": 3.55589
+  },
+  {
+    "id_station_itinerance": "FRIZI_1008",
+    "nom_operateur": "IZIVIA",
+    "nom_station": "IZIVIA Station 8",
+    "adresse_station": "161 Rue de l'Énergie",
+    "code_insee_commune": "91070",
+    "puissance_nominale": 50,
+    "nbre_pdc": 6,
+    "condition_acces": "ACCES_LIBRE",
+    "latitude": 41.795882,
+    "longitude": -1.102326
+  },
+  {
+    "id_station_itinerance": "FRIZI_1009",
+    "nom_operateur": "IZIVIA",
+    "nom_station": "IZIVIA Station 9",
+    "adresse_station": "59 Rue de l'Énergie",
+    "code_insee_commune": "47930",
+    "puissance_nominale": 22,
+    "nbre_pdc": 8,
+    "condition_acces": "ACCES_LIBRE",
+    "latitude": 48.116176,
+    "longitude": -4.812634
+  },
+  {
+    "id_station_itinerance": "FRIZI_1010",
+    "nom_operateur": "IZIVIA",
+    "nom_station": "IZIVIA Station 10",
+    "adresse_station": "117 Rue de l'Énergie",
+    "code_insee_commune": "93320",
+    "puissance_nominale": 50,
+    "nbre_pdc": 3,
+    "condition_acces": "ACCES_RESERVE",
+    "latitude": 49.751485,
+    "longitude": 0.201893
+  }
+]
