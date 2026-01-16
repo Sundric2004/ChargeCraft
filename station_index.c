@@ -65,3 +65,19 @@ void si_print_sideways(StationNode* r){
     for(int i=1;i<depth;i++) printf("    "); printf("%d(h=%d) P=%dKW Price=%dc Slots=%d\n", r->station_id, r->height, r->info.power_kW, r->info.price_cents, r->info.slots_free);
     si_print_sideways(r->left); depth--;
 }
+
+StationNode* si_min(StationNode* r){
+    if (!r) return NULL;
+    while (r->left) {
+        r = r->left;
+    }
+    return r;
+}
+
+StationNode* si_max(StationNode* r){
+    if (!r) return NULL;
+    while (r->right) {
+        r = r->right;
+    }
+    return r;
+}

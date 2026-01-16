@@ -13,4 +13,6 @@ int    n_attach(NNode* parent, NNode* child);
 void   n_bfs_print(NNode* root);
 void   n_clear(NNode* root);
 
+int n_aggregate(NNode* root); /* Somme récursive des items_count */
+
 #endif

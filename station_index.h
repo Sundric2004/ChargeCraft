@@ -22,10 +22,13 @@ typedef struct StationIndex {
 
 void si_init(StationIndex* idx);
 StationNode* si_find(StationNode* r, int id);           /* O(log n) */
-void si_add(StationIndex* idx, int id, StationInfo in); /* AVL insert */
+void si_add(StationIndex* idx, int id, StationInfo in); /* O(log n) */
 int  si_delete(StationIndex* idx, int id);              /* AVL delete */
 int  si_to_array(StationNode* r, int* ids, int cap);    /* inorder fill */
 void si_print_sideways(StationNode* r);                 /* debug */
 void si_clear(StationIndex* idx);                       /* postorder free */
+
+StationNode* si_min(StationNode* r);                    /* O(log n) */
+StationNode* si_max(StationNode* r);                    /* O(log n) */
 
 #endif

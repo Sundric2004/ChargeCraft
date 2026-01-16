@@ -40,3 +40,13 @@ static void n_clear_rec(NNode* r){
     free(r);
 }
 void n_clear(NNode* root){ n_clear_rec(root); }
+
+
+int n_aggregate(NNode* root){
+    if(!root) return 0;
+    int total = root->items_count; // La valeur du nœud courant
+    for(int i=0; i < root->child_count; i++){
+        total += n_aggregate(root->child[i]); // + la somme des enfants
+    }
+    return total;
+}
