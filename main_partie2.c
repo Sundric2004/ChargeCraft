@@ -39,28 +39,28 @@ void print_separator(const char* title) {
  * Démonstration des modules A1 et A2 individuellement
  */
 void demo_modules_standalone() {
-    print_separator("DÉMONSTRATION DES MODULES AVANCÉS");
+    print_separator("DEMONSTRATION DES MODULES AVANCES");
     
     // Chargement CSV
     StationIndex idx;
     si_init(&idx);
     
-    printf(">>> Chargement du dataset...\n");
+    printf("Chargement du dataset...\n");
     int loaded = ds_load_stations_from_csv("izivia_tp_subset.csv", &idx);
     if (loaded <= 0) {
         printf("[ERREUR] Impossible de charger le CSV\n");
         return;
     }
-    printf("    ✓ %d stations chargées\n\n", loaded);
+    printf("%d stations chargees\n\n", loaded);
     
     // ========== MODULE A1 : RANGE QUERIES ==========
-    printf(">>> MODULE A1 : Range Queries sur AVL\n\n");
+    printf("MODULE A1 : Range Queries sur AVL\n\n");
     
     // Test 1 : Range query [1100, 1150]
     printf("  Test 1 : Extraction des stations dans [1100, 1150]\n");
     int range_ids[100];
     int count = si_range_ids(idx.root, 1100, 1150, range_ids, 100);
-    printf("    Résultat : %d stations trouvées\n", count);
+    printf("    Resultat : %d stations trouvees\n", count);
     printf("    Premières IDs : ");
     for (int i = 0; i < count && i < 10; i++) {
         printf("%d ", range_ids[i]);
@@ -68,17 +68,17 @@ void demo_modules_standalone() {
     printf("%s\n\n", count > 10 ? "..." : "");
     
     // Test 2 : Comptage stations haute puissance
-    printf("  Test 2 : Comptage des stations avec puissance ≥ 100 kW\n");
+    printf("  Test 2 : Comptage des stations avec puissance >= 100 kW\n");
     int high_power_count = si_count_ge_power(idx.root, 100);
-    printf("    Résultat : %d stations haute puissance\n\n", high_power_count);
+    printf("    Resultat : %d stations haute puissance\n\n", high_power_count);
     
     // Test 3 : Comptage stations >= 50 kW
-    printf("  Test 3 : Comptage des stations avec puissance ≥ 50 kW\n");
+    printf("  Test 3 : Comptage des stations avec puissance >= 50 kW\n");
     int medium_power_count = si_count_ge_power(idx.root, 50);
-    printf("    Résultat : %d stations\n\n", medium_power_count);
+    printf("    Resultat : %d stations\n\n", medium_power_count);
     
     // ========== MODULE A2 : TOP-K PAR SCORE ==========
-    printf(">>> MODULE A2 : Top-K par score avec min-heap\n\n");
+    printf(" MODULE A2 : Top-K par score avec min-heap\n\n");
     
     // Test 1 : Top-5 avec pondération équilibrée
     printf("  Test 1 : Top-5 (score = 2*slots + 1*power - 1*price)\n");
@@ -111,30 +111,30 @@ void demo_modules_standalone() {
     printf("\n");
     
     // ========== MODULE A4 : MRU AVANCÉE ==========
-    printf(">>> MODULE A4 : MRU capée sans doublons\n\n");
+    printf(" MODULE A4 : MRU capee sans doublons\n\n");
     
     SList mru;
     ds_slist_init(&mru);
     int MRU_CAP = 5;
     
-    printf("  Test : Ajout de 7 stations dans un MRU de capacité %d\n", MRU_CAP);
+    printf("  Test : Ajout de 7 stations dans un MRU de capacite %d\n", MRU_CAP);
     
     // Ajouter des stations
     int test_stations[] = {101, 102, 103, 104, 105, 106, 107};
     for (int i = 0; i < 7; i++) {
         mru_add_station(&mru, test_stations[i], MRU_CAP);
-        printf("    Après ajout %d : ", test_stations[i]);
+        printf("    Apres ajout %d : ", test_stations[i]);
         ds_slist_print(&mru);
     }
     
-    printf("\n  Test : Ajout d'une station déjà présente (102)\n");
+    printf("\n  Test : Ajout d'une station deja presente (102)\n");
     mru_add_station(&mru, 102, MRU_CAP);
-    printf("    Résultat : ");
+    printf("    Resultat : ");
     ds_slist_print(&mru);
-    printf("    → 102 remonté en tête (pas de doublon)\n\n");
+    printf("    102 remonte en tete (pas de doublon)\n\n");
     
     // Vérification contains
-    printf("  Test : Vérification de présence\n");
+    printf("  Test : Verification de presence\n");
     printf("    Station 102 dans MRU ? %s\n", mru_contains(&mru, 102) ? "OUI" : "NON");
     printf("    Station 101 dans MRU ? %s\n", mru_contains(&mru, 101) ? "OUI" : "NON");
     printf("    Station 999 dans MRU ? %s\n\n", mru_contains(&mru, 999) ? "OUI" : "NON");
@@ -146,12 +146,12 @@ void demo_modules_standalone() {
 
 int main(void) {
     printf("\n");
-    printf("████████████████████████████████████████████████████████████████████████████████\n");
+    printf("================================================================================\n");
     printf("                                                                                \n");
     printf("                          ChargeCraft - PARTIE 2                                \n");
-    printf("                    Modules Avancés & Scénario Applicatif                       \n");
+    printf("                    Modules Avances & Scenario Applicatif                       \n");
     printf("                                                                                \n");
-    printf("████████████████████████████████████████████████████████████████████████████████\n");
+    printf("================================================================================\n");
     printf("\n");
     
     // Démonstration des modules individuellement
@@ -161,9 +161,9 @@ int main(void) {
     run_rush_hour_scenario();
     
     printf("\n");
-    printf("████████████████████████████████████████████████████████████████████████████████\n");
-    printf("                     FIN DE LA DÉMONSTRATION PARTIE 2                          \n");
-    printf("████████████████████████████████████████████████████████████████████████████████\n");
+    printf("================================================================================\n");
+    printf("                     FIN DE LA DEMONSTRATION PARTIE 2                          \n");
+    printf("================================================================================\n");
     printf("\n");
     
     return 0;
