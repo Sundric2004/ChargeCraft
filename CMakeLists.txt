@@ -23,4 +23,12 @@ add_executable(ChargeCraft
         stack.c
         stack.h
         station_index.c
-        station_index.h)
+        station_index.h
+        advanced_queries.h
+        advanced_queries.c
+        mru_advanced.h
+        mru_advanced.c
+        scenario_rush_hour.c
+        scenario_rush_hour.h
+        main_partie2.c
+)

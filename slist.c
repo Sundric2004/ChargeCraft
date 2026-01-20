@@ -18,7 +18,8 @@ int ds_slist_remove_tail(SList* l, int* out){
     if(!l->head->next){ if(out) *out=l->head->value; free(l->head); l->head=0; return 1; }
     SNode* p=0; SNode* c=l->head;
     while(c->next){ p=c; c=c->next; }
-    if(out) *out=c->value; p->next=0; free(c); return 1;
+    if(out) *out=c->value;
+    p->next=0; free(c); return 1;
 }
 void ds_slist_print(SList* l){
     SNode* c=l->head; printf("[");
