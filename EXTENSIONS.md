@@ -22,4 +22,4 @@ Nous avons encapsulé la liste chaînée (SList) dans une logique de gestion str
 - Unicité : Suppression préventive de l'ID s'il existe déjà (remove_value).
 - Fraîcheur : Insertion systématique en tête (insert_head).
 - Capacité : Vérification de la taille et suppression de la queue (remove_tail) si dépassement.
-- Complexité : $O(L)$ où $L$ est la capacité (ex: 5). Comme $L$ est une petite constante, cela revient à du $O(1)$ en pratique.
+- Complexité : O(L) où L est la capacité (ex: 5). Comme L est une petite constante, cela revient à du O(1) en pratique.
