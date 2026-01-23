@@ -18,7 +18,7 @@ Nous avons utilisé un Tas Min (Min-Heap) de taille fixe $K$ pour filtrer les st
 La gestion simple de l'historique (Partie 1) avait deux défauts majeurs pour un usage réel :
 - Elle autorisait les doublons (voir "Station 101" trois fois de suite est inutile).
 - Elle pouvait croître indéfiniment (fuite mémoire potentielle) sans une limite stricte.
-- Nous avons encapsulé la liste chaînée (SList) dans une logique de gestion stricte :
+Nous avons encapsulé la liste chaînée (SList) dans une logique de gestion stricte :
 - Unicité : Suppression préventive de l'ID s'il existe déjà (remove_value).
 - Fraîcheur : Insertion systématique en tête (insert_head).
 - Capacité : Vérification de la taille et suppression de la queue (remove_tail) si dépassement.
