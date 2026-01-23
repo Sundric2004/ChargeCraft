@@ -54,3 +54,8 @@ L'Arbre AVL
 4. Conclusion pour ChargeCraft
 
 Pour un système de supervision de bornes de recharge, l'AVL est le choix de la rigueur. Bien que l'implémentation de l'AVL soit plus complexe à cause des rotations, elle est indispensable pour éviter que le système ne ralentisse drastiquement si les stations sont enregistrées par blocs d'identifiants consécutifs. L'AVL garantit une fluidité constante des requêtes "Top-N" et des filtrages, quel que soit l'ordre d'arrivée des données.
+
+
+5. Remarque sur la compilation :
+
+On a créé deux mains, ChargeCraft_V1 et ChargeCraft_V2. la V1 correspond au test des starters (partie 1 du projet), on a alors choisi de créer un autre main pour ne pas avoir un seul main encombré. CMakeLists.txt a la manière de comment on gère ces deux mains, et sur l'IDE on peut basculer sur les deux exécutables facilement.
